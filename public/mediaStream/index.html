@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebRTC capture video and audio</title>
+
+    <style>
+        .none {-webkit-filter: none}
+        .blur {-webkit-filter: blur(8pm)}
+        .grayscale {-webkit-filter: grayscale(1)}
+        .invert {-webkit-filter: invert(1)}
+        .sepia {-webkit-filter: sepia(1)}
+    </style>
+</head>
+<body>
+        <div>
+            <label>audio source: </label>
+            <select id="audioSource"></select>        
+        </div>
+        <div>
+            <label>audio output: </label>
+            <select id="audioOutput"></select>
+        </div>
+        <div>
+            <label>vedio source: </label>
+            <select id="vedioSource"></select>
+        </div>
+        <div>
+            <label>filter: </label>
+            <select id="filter">
+                <option value="none">none</option>
+                <option value="blur">blur</option>
+                <option value="grayscale">grayscale</option>
+                <option value="invert">invert</option>
+                <option value="sepia">sepia</option>
+            </select>
+        </div>
+    <video autoplay playsinline id="player"></video>
+    <script src="https://github.com/webrtchacks/adapter/adapter-7.2.5.js"></script>
+    <script src="./js/client.js"></script>
+</body>
+</html>
